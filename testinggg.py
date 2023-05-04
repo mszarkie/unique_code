@@ -1,7 +1,14 @@
 from random import randint, choice
 from datetime import datetime
 
-print(datetime.now())
+
+actual_date = datetime.now()
+seconds = actual_date.strftime('%S')
+micro_seconds = actual_date.strftime('%f')
+print(seconds[-1])
+
+print(micro_seconds[0::4])
+
 
 name = input("Enter your name: ")
 
