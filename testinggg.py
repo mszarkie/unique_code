@@ -1,4 +1,7 @@
 from random import randint, choice
+from datetime import datetime
+
+print(datetime.now())
 
 name = input("Enter your name: ")
 
