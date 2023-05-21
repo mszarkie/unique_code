@@ -1,13 +1,15 @@
 from random import randint, choice
 from datetime import datetime
-
+from alpha import uno
 
 actual_date = datetime.now()
 seconds = actual_date.strftime('%S')
 micro_seconds = actual_date.strftime('%f')
-print(seconds[-1])
 
-print(micro_seconds[0::4])
+
+# print(seconds[-1])
+#
+# print(micro_seconds[0::4])
 
 
 name = input("Enter your name: ")
@@ -23,6 +25,9 @@ name = input("Enter your name: ")
         print("Wrong syntax. Enter your name again")"""
 
 surname = input("Enter your surname: ")
+
+
+
 
 """while True:
     if len(name) in range(10):
@@ -40,10 +45,16 @@ uniqueCodeList = []
 
 alphabet = 'qwertyuiopasdfghjklzxcvbnm'
 
+two_letters = choice(alphabet) + choice(alphabet)
+print("this is choice x2:", two_letters)
 
-unique_code = choice(alphabet) + str(randint(1, 9)) + surname[0] + name[1] + '-' + \
-              choice(surname) + str(a*b) + '-' + \
-              surname[2::-2] + str(randint(10, 99))
+# alpha = choice(alphabet) + str(randint(1, 9)) + surname[0] + name[1] + '-'
+beta = choice(surname) + str(a*b) + '-'
+omega = surname[2::-2] + str(randint(10, 99))
+
+
+unique_code = uno(surname, name) + beta + omega
+
 
 uniqueCodeList.append(unique_code.upper())
 
