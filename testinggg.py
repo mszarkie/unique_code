@@ -1,6 +1,6 @@
 from random import choice
 from datetime import datetime
-from alpha import uno, dos, tres
+from alpha import uno, dos, tres, quatro
 
 name = input("Enter your name: ")
 surname = input("Enter your surname: ")
@@ -44,8 +44,9 @@ print("this is choice x2:", two_letters)
 a = uno(surname, name)
 b = dos(surname, name)
 c = tres(surname)
+d = quatro()
 
-unique_code = a + b + c
+unique_code = a + b + c + d
 
 uniqueCodeList.append(unique_code.upper())
 
