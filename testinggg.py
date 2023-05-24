@@ -30,9 +30,9 @@ seconds = actual_date.strftime('%S')
 micro_seconds = actual_date.strftime('%f')
 
 
-# print(seconds[-1])
+print("seconds", seconds[-1])
 #
-# print(micro_seconds[0::4])
+print("micros:", micro_seconds[0::4])
 
 uniqueCodeList = []
 
