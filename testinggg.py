@@ -15,6 +15,11 @@ surname = input("Enter your surname: ")
     else:
         print("Wrong syntax. Enter your name again")"""
 
+# if len(str(value)) != 13:
+#     ValidationError('ISBN must contains 13 digits')
+# o tak o sie to robi
+
+
 """while True:
     if len(name) in range(10):
         pass
