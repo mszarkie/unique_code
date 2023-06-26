@@ -1,27 +1,33 @@
-from random import randint, choice
+from random import randint, choice, shuffle
 from datetime import datetime
 
 
-def uno(surname, name):
+def uno():
     alphabet = 'qwertyuiopasdfghjklzxcvbnm'
-    return choice(alphabet) + str(randint(1, 9)) + surname[0] + name[2] + '-'
+    str_to_list = " ".join(alphabet).split()
+    shuffle(str_to_list)
+    x = str_to_list[2::-2]
+    list_to_str = ''.join([str(elem) for elem in x])
+    return list_to_str + str(randint(10, 99)) + '-'
 
 
-def dos(surname, name):
-    a = len(name)
-    b = len(surname)
+def dos():
+    alphabet = 'qwertyuiopasdfghjklzxcvbnm'
     actual_date = datetime.now()
     seconds = actual_date.strftime('%S')
-    return choice(surname) + str(a*b) + seconds[-1] + '-'
+    return choice(alphabet) + str(randint(1, 9)) + choice(alphabet) + seconds[-1] + '-'
 
 
-def tres(surname):
-    return surname[2::-2] + str(randint(10, 99)) + '-'
-
-def quatro():
+def tres():
     actual_date = datetime.now()
     micro_seconds = actual_date.strftime('%f')
     xyz = 'xyz'
-    return micro_seconds[0::4] + choice(xyz)
+    return micro_seconds[0::4] + choice(xyz) + micro_seconds[-1] + '-'
 
-#after some testing i know that this surname[] and name[] is bad, becouse it will be easy to know whats going know
+
+def quatro():
+    alphabet = 'qwertyuiopasdfghjklzxcvbnm'
+    xyz = 'xyz'
+    return str(randint(0, 9)) + choice(alphabet) + choice(xyz) + str(randint(0, 9))
+
+
